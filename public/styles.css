@@ -1,0 +1,114 @@
+body {
+    background-color: blue;
+    color: powderblue;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    text-align: left;
+}
+
+
+p {
+    font-size: 25px;
+    font-family: serif;
+}
+
+label {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input {
+    width: 200px;
+    height: 20px;
+    margin-bottom: 30px;
+}
+
+img {
+    margin-bottom: 30px;
+}
+
+a {
+    width: 200px;
+    color: blue;
+    background-color: white;
+    border-radius:0 50%;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px 10px;
+    margin: 10px 30px;
+    border: solid 2px black;
+    text-decoration: none;
+} 
+
+
+button {
+    width: 200px;
+    color: blue;
+    background-color: white;
+    border-radius:0 50%;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px 10px;
+    margin: 10px 30px;
+    border: solid 2px black;
+    text-decoration: none;
+} 
+
+@media only screen and (max-width: 800px) {
+    a {
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+    } 
+
+    p {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+  }
+
+.btn:hover {
+        color: white;
+        background-color: blue;
+}
+
+.container {
+    display: flex;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    height: 30vh;
+    background-color: blue;
+    justify-content: center;
+}
+
+.cloud-img {
+    height: 50px;
+    width: 50px;
+}
+
+.cloud {
+    height: 70px;
+    width: 70px;
+    
+}
+
+h2 {
+    color: white;
+}
+
+.extra {
+    background-image: -webkit-linear-gradient(60deg, blue, red);
+}
