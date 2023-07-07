@@ -1,27 +1,25 @@
 require("dotenv").config();
-
 const express = require("express");
 const bodyParser = require("body-parser");
-const ejs = require("ejs");
 const https = require("https");
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-app.set("view engine", "ejs");
+
 
 const myKey = process.env.API_KEY;
 
 app.get("/", function(req, res){
-    res.render("index");
+    res.sendFile(__dirname + "/index.html");
 });
 
 app.get("/stat", function(req, res){
-    res.render("stat");
+    res.sendFile(__dirname + "/stat.html");
 });
 
 app.get("/forecast", function(req, res){
-    res.render("forecast");
+    res.sendFile(__dirname + "/forecast.html");
 });
 
 app.post("/stat", function(req, res){
@@ -49,11 +47,7 @@ app.post("/stat", function(req, res){
     });
  })
 
- 
 
-
-
-
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("App is up and running on port 3000");
 });
